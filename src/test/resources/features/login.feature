@@ -11,7 +11,7 @@ Feature: Library app login feature
     Given user is on library login page
     # Background - is like the @BeforeMethod in testNG, in each scenario background will run in them
 
-  @librarian @employee @wip
+  @librarian @employee
   Scenario: Login as librarian
     When user enters librarian username
     And user enters librarian password

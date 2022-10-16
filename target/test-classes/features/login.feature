@@ -1,4 +1,4 @@
-@Regression @smoke
+@Regression @smoke @login
 Feature: Library app login feature
 
   User Story:
@@ -18,7 +18,7 @@ Feature: Library app login feature
     Then user should see the dashboard
 
 
-    @student
+    @student @db
     Scenario: Login as student
       When user enters student username
       And user enters student password
