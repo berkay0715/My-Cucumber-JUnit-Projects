@@ -12,11 +12,11 @@ public class GoogleStepDefinitions {
 
    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
-    @Then("user types {word} and clicks enter")
-    public void user_types_and_clicks_enter2(String searchKeyWord) {
+    @When("user types apple and clicks enter")
+    public void user_types_and_clicks_enter2() {
 
         googleSearchPage.AlertBox.click();
-        googleSearchPage.searchBox.sendKeys(searchKeyWord + Keys.ENTER);
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
 
 
     }
@@ -27,6 +27,7 @@ public class GoogleStepDefinitions {
 
 
     }
+
     @Then("user sees {string} in the google title")
     public void user_sees_in_the_google_title(String string) {
         String expectedTitle = string + " - Google Search";
