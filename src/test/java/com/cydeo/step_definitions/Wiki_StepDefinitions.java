@@ -11,10 +11,9 @@ public class Wiki_StepDefinitions {
 
     WikiSearchPage wikiSearchPage = new WikiSearchPage();
     @Given("User is on Wikipedia home page")
-    public void user_is_on_wikipedia_home_page() throws InterruptedException {
+    public void user_is_on_wikipedia_home_page(){
         Driver.getDriver().get("https://www.wikipedia.org");
 
-        Thread.sleep(3000);
     }
     @When("User types {string} in the wiki search box")
     public void user_types_in_the_wiki_search_box(String string) {
@@ -39,4 +38,11 @@ public class Wiki_StepDefinitions {
 
     }
 
+    @Then("User sees {string} is in the main header")
+    public void user_Sees_SteveJobs_Is_In_The_MainHeader(String string) {
+
+        Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+
+        //Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals("Steve Jobs"));
+    }
 }
