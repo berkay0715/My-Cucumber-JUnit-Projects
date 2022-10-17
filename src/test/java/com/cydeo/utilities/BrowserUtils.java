@@ -51,8 +51,13 @@ public class BrowserUtils {
 
         Assert.assertEquals(Driver.getDriver().getTitle(),expectedTitle);
     }
-    public static void verifyURLContains(String expectedInTitle){
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
+
+    /**
+     * This method will accept a String as expected value and verify actual URL CONTAINS the value.
+     * @param expectedInURL
+     */
+    public static void verifyURLContains(String expectedInURL){
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
     /*
