@@ -7,7 +7,7 @@ Feature: User should be able to login using correct credentials
     And user clicks to login button
     Then user should see URL contains orders
 
-  @wip
+
   Scenario: Positive Login Scenario
       Given user is on the login page of the wer table app
       When user enters username "Test" and password "Tester" and logins
