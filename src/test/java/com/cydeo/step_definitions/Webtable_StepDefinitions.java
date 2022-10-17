@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -35,5 +36,15 @@ public class Webtable_StepDefinitions {
       String currentULR =  Driver.getDriver().getCurrentUrl();
 
         Assert.assertTrue(currentULR.contains("orders"));
+
+        // or you can use verifyURLContains method from the BrowserUtils
+
+        BrowserUtils.verifyURLContains("orders");
+    }
+    @When("user enters username {string} and password {string} and logins")
+    public void user_enters_username_and_password_and_logins(String username, String password) {
+        webTableLoginPage.inputUsername.sendKeys(username);
+        webTableLoginPage.inputPassword.sendKeys(password);
+        webTableLoginPage.loginButton.click();
     }
 }
