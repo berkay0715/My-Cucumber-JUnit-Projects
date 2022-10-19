@@ -30,7 +30,7 @@ public class DataTables_StepDefinitions {
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
 
         //This method will returns the List of Strings of giver dropdowns options
-       List<String>actualMonths = BrowserUtils.dropDownOptionsAsString(dropDownsPage.monthDropDown);
+       List<String>actualMonths = BrowserUtils.dropdownOptionsAsString(dropDownsPage.monthDropDown);
 
 
         Assert.assertEquals(expectedMonths,actualMonths);
