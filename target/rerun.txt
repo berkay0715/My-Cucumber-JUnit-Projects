@@ -1,0 +1,2 @@
+file:src/test/resources/features/webTableLogin.feature:22
+file:src/test/resources/features/googleSearch.feature:15
